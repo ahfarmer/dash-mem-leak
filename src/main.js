@@ -8,6 +8,17 @@ function init() {
   video = document.querySelector("video");
   player = MediaPlayer().create();
   player.initialize(video, url, false);
+
+  function onClick() {
+    player.reset();
+    player = MediaPlayer().create();
+    player.initialize(video, url, false);
+  }
+
+  var button = document.createElement('button')
+  button.innerHTML = 'Recreate';
+  button.addEventListener('click', onClick);
+  document.body.appendChild(button);
 }
 
 document.addEventListener("DOMContentLoaded", function () {

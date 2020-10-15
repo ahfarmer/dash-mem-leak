@@ -8,6 +8,7 @@ module.exports = {
     path: path.join(__dirname, "www"),
     filename: "bundle.js"
   },
+  devtool: false,
   module: {
     rules: [
       {
